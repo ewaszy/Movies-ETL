@@ -1,0 +1,390 @@
+<!DOCTYPE html><meta charset="UTF-8"> <head> <title id='Title'></title> </head>
+<style>
+    @font-face {
+        font-family: 'HP Simplified';
+        src: url('hpsimplified_rg-webfont.ttf');
+    }
+
+    body {
+        font-family: 'HP Simplified';
+    }
+
+    td.AlignCenter {
+        border: 1px solid black;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    td.AlignLeft {
+        margin-left: 1em;
+    }
+
+    td.AlignLeftFontSize {
+        margin-left: 1em;
+        font-size: 9px;
+    }
+
+    .passed {
+        background-color: #C6EFCE;
+    }
+
+    .failed {
+        background-color: #ff3300;
+    }
+
+    th {
+        border: 1px solid black;
+        padding-left: 5px;
+    }
+
+    table {
+        border: 1px solid black;
+        width: 800px;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    tr.Overlap {
+        word-wrap: break-word;
+    }
+
+    tr.uefiBlue {
+        background-color: #0096D5;
+        color: #fff;
+        word-wrap: break-word;
+    }
+</style>
+<script type="text/javascript">
+
+    function Begin() {
+
+        var desiredWidth = window.outerWidth;
+
+        var headerHeight = (document.getElementById("mainNav") || {}).offsetHeight;
+        var windowHeight = window.innerHeight;
+
+        AppendData();
+
+        var platformInfoElem = document.getElementById("tablesContainer");
+
+        var elemHeight = document.getElementById("PlatformInfo").offsetHeight;
+
+        var otherHeight = document.getElementById("productInfoContainer").clientHeight;
+
+        var desiredHeight = windowHeight - headerHeight - (elemHeight - platformInfoElem.offsetHeight) - 75;
+
+        platformInfoElem.style.width = desiredWidth;
+        platformInfoElem.style.height = desiredHeight + "px";
+    }
+
+    function AppendData() {
+        var data = [{"Id":"bc48b07e-3dff-4256-9fbc-8a4e74bd503c","ToolName":"Fast CPU Stress Test","ToolVersion":"8.7.0.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:13:47 PM","FormattedStopTime":"6/12/2021 7:15:00 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:1:13","LogData":"LogMessage 14 20000 \"diagnostic: C:\\Users\\ewaas\\AppData\\Local\\Temp\\HPDIAGS\\bc48b07e-3dff-4256-9fbc-8a4e74bd503c\\stress-diags.exe\" \"\"\r\nLogMessage 14 20000 \"version: 8.7.0, timestamp: Aug 29 2018 15:03:35 1534, cdm: 8.10.0, ms: 8.3.0\" \"\"\r\nLogMessage 14 20000 \"-subtest=ProcessorStressTest\" \"\"\r\nLogMessage 14 20000 \"-locale=en_US\" \"\"\r\nLogMessage 14 20000 \"-debug=false\" \"\"\r\nLogMessage 14 20000 \"-version=false\" \"\"\r\nLogMessage 14 20000 \"-description=false\" \"\"\r\nLogMessage 14 20000 \"-help=false\" \"\"\r\nLogMessage 14 20000 \"-catalog=false\" \"\"\r\nLogMessage 14 20000 \"-diagconf=.\\diagconf.ini\" \"\"\r\nLogMessage 14 20000 \"-paramfile=\" \"\"\r\nLogMessage 14 20000 \"-paramsection=\" \"\"\r\nLogMessage 14 20000 \"-Caption=\" \"\"\r\nLogMessage 14 20000 \"-DataCollectionFile=\" \"\"\r\nLogMessage 14 20000 \"-LogicalProc=\" \"\"\r\nLogMessage 14 20000 \"-TestTime=1\" \"\"\r\nLogMessage 14 20000 \"-integratormsgfile=\" \"\"\r\nLogMessage 14 20000 \"-paramfile=\" \"\"\r\nLogMessage 14 20000 \"-paramsection=\" \"\"\r\nLogMessage 14 20000 \"-tiledpopups=\" \"\"\r\nLogMessage 14 20000 \"-tiledpopupsbutton=\" \"\"\r\nLogMessage 14 20000 \"-tiledpopupsnofocus=\" \"\"\r\nUpdatePercentage 0\r\nLogMessage 14 8 \"Completed in 47ms\" \"\"\r\nLogMessage 3 2 \"\" \"\"\r\nLogMessage 14 58 \"4\" \"\"\r\nLogMessage 14 69 \"4\" \"\"\r\nUpdatePercentage 1\r\nLogMessage 14 8 \"Completed in 1468ms\" \"\"\r\nUpdatePercentage 16\r\nLogMessage 14 8 \"Completed in 17594ms\" \"\"\r\nUpdatePercentage 50\r\nLogMessage 14 8 \"Completed in 17828ms\" \"\"\r\nUpdatePercentage 83\r\nLogMessage 14 8 \"Completed in 17750ms\" \"\"\r\nLogMessage 14 45 \"100\" \"\"\r\nLogMessage 14 46 \"23\" \"\"\r\nUpdatePercentage 100\r\nLogMessage 14 8 \"Completed in 17985ms\" \"\"\r\nLogMessage 3 3 \"\" \"\"\r\nLogMessage 14 20000 \"Test execution time: 72703 milliseconds\" \"\"\r\nEndOfTest\r\n","Record":null},{"Id":"3006e6d6-5ab9-414c-a53b-86e19e9ff4fe","ToolName":"Wireless ROM Test","ToolVersion":"8.4.0.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:13:45 PM","FormattedStopTime":"6/12/2021 7:13:46 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:0:1","LogData":"LogMessage Debug diagnostic: C:\\Users\\ewaas\\AppData\\Local\\Temp\\HPDIAGS\\3006e6d6-5ab9-414c-a53b-86e19e9ff4fe\\net-diags.exe \"\"\r\nLogMessage Debug version: 8.4.1, timestamp: Oct 2 2018 11:20:56 1534, cdm: 8.11.0, net: 8.0.0, ms: 8.3.0 \"\"\r\nLogMessage Debug -subtest=ROMTest \"\"\r\nLogMessage Debug -locale=en \"\"\r\nLogMessage Debug -debug=true \"\"\r\nLogMessage Debug -version=false \"\"\r\nLogMessage Debug -description=false \"\"\r\nLogMessage Debug -help=false \"\"\r\nLogMessage Debug -catalog=false \"\"\r\nLogMessage Debug -diagconf=.\\diagconf.ini \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -Caption= \"\"\r\nLogMessage Debug -DataCollectionFile= \"\"\r\nLogMessage Debug -DeviceDescription=Intel(R) Dual Band Wireless-AC 3165 \"\"\r\nLogMessage Debug -DeviceID= \"\"\r\nLogMessage Debug -EEPROMSize=64 \"\"\r\nLogMessage Debug -Index=1 \"\"\r\nLogMessage Debug -Retries=2 \"\"\r\nLogMessage Debug -TestRepeats=1 \"\"\r\nLogMessage Debug -VerifyCheckSum=false \"\"\r\nLogMessage Debug -VerifyInvalidMACPattern=false \"\"\r\nLogMessage Debug -VerifyMAC=false \"\"\r\nLogMessage Debug -VerifyMACRange=false \"\"\r\nLogMessage Debug -integratormsgfile=.\\net-diags.msg \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -tiledpopups= \"\"\r\nLogMessage Debug -tiledpopupsbutton= \"\"\r\nLogMessage Debug -tiledpopupsnofocus= \"\"\r\nLogMessage ServiceErrors Test parameters VerifyMAC, VerifyChecksum, and EEPROMSize are not being used in this test and are being ignored. \"\"\r\nLogMessage Subtests Test started \"\"\r\nUpdatePercentage 5\r\nLogMessage Debug Completed in 172ms \"\"\r\nUpdatePercentage 10\r\nLogMessage Debug Completed in 16ms \"\"\r\nLogMessage Debug Intel(R) Dual Band Wireless-AC 3165 \"\"\r\nUpdatePercentage 20\r\nLogMessage Debug Completed in 125ms \"\"\r\nLogMessage Debug MAC Adrress detected is AC-2B-6E-C7-8C-42. \"\"\r\nUpdatePercentage 30\r\nLogMessage Debug Completed in 140ms \"\"\r\nUpdatePercentage 40\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Debug MACAddres is valid. \"\"\r\nUpdatePercentage 60\r\nLogMessage Debug Completed in 0ms \"\"\r\nUpdatePercentage 80\r\nLogMessage Debug Completed in 0ms \"\"\r\nUpdatePercentage 90\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test passed \"\"\r\nUpdatePercentage 100\r\nLogMessage Debug Completed in 78ms \"\"\r\nLogMessage Debug Test execution time: 500 milliseconds \"\"\r\nEndOfTest\r\n","Record":null},{"Id":"3006e6d6-5ab9-414c-a53b-86e19e9ff4fd","ToolName":"ROM Test","ToolVersion":"8.4.0.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:13:43 PM","FormattedStopTime":"6/12/2021 7:13:44 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:0:1","LogData":"LogMessage Debug diagnostic: C:\\Users\\ewaas\\AppData\\Local\\Temp\\HPDIAGS\\3006e6d6-5ab9-414c-a53b-86e19e9ff4fd\\net-diags.exe \"\"\r\nLogMessage Debug version: 8.4.1, timestamp: Oct 2 2018 11:20:56 1534, cdm: 8.11.0, net: 8.0.0, ms: 8.3.0 \"\"\r\nLogMessage Debug -subtest=ROMTest \"\"\r\nLogMessage Debug -locale=en \"\"\r\nLogMessage Debug -debug=true \"\"\r\nLogMessage Debug -version=false \"\"\r\nLogMessage Debug -description=false \"\"\r\nLogMessage Debug -help=false \"\"\r\nLogMessage Debug -catalog=false \"\"\r\nLogMessage Debug -diagconf=.\\diagconf.ini \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -Caption= \"\"\r\nLogMessage Debug -DataCollectionFile= \"\"\r\nLogMessage Debug -DeviceDescription=Realtek PCIe FE Family Controller \"\"\r\nLogMessage Debug -DeviceID= \"\"\r\nLogMessage Debug -EEPROMSize=64 \"\"\r\nLogMessage Debug -Index=1 \"\"\r\nLogMessage Debug -Retries=2 \"\"\r\nLogMessage Debug -TestRepeats=1 \"\"\r\nLogMessage Debug -VerifyCheckSum=false \"\"\r\nLogMessage Debug -VerifyInvalidMACPattern=false \"\"\r\nLogMessage Debug -VerifyMAC=false \"\"\r\nLogMessage Debug -VerifyMACRange=false \"\"\r\nLogMessage Debug -integratormsgfile=.\\net-diags.msg \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -tiledpopups= \"\"\r\nLogMessage Debug -tiledpopupsbutton= \"\"\r\nLogMessage Debug -tiledpopupsnofocus= \"\"\r\nLogMessage ServiceErrors Test parameters VerifyMAC, VerifyChecksum, and EEPROMSize are not being used in this test and are being ignored. \"\"\r\nLogMessage Subtests Test started \"\"\r\nUpdatePercentage 5\r\nLogMessage Debug Completed in 219ms \"\"\r\nUpdatePercentage 10\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Debug Realtek PCIe FE Family Controller \"\"\r\nUpdatePercentage 20\r\nLogMessage Debug Completed in 156ms \"\"\r\nLogMessage Debug MAC Adrress detected is A0-8C-FD-33-40-24. \"\"\r\nUpdatePercentage 30\r\nLogMessage Debug Completed in 141ms \"\"\r\nUpdatePercentage 40\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Debug MACAddres is valid. \"\"\r\nUpdatePercentage 60\r\nLogMessage Debug Completed in 0ms \"\"\r\nUpdatePercentage 80\r\nLogMessage Debug Completed in 16ms \"\"\r\nUpdatePercentage 90\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test passed \"\"\r\nUpdatePercentage 100\r\nLogMessage Debug Completed in 62ms \"\"\r\nLogMessage Debug Test execution time: 563 milliseconds \"\"\r\nEndOfTest\r\n","Record":null},{"Id":"4e9e1ce2-4e01-4cf0-bb65-5ccd4b82edc4","ToolName":"Wireless IRQ Test","ToolVersion":"8.4.0.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:13:41 PM","FormattedStopTime":"6/12/2021 7:13:42 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:0:0","LogData":"LogMessage Debug diagnostic: C:\\Users\\ewaas\\AppData\\Local\\Temp\\HPDIAGS\\4e9e1ce2-4e01-4cf0-bb65-5ccd4b82edc4\\net-diags.exe \"\"\r\nLogMessage Debug version: 8.4.1, timestamp: Oct 2 2018 11:20:56 1534, cdm: 8.11.0, net: 8.0.0, ms: 8.3.0 \"\"\r\nLogMessage Debug -subtest=IRQTest \"\"\r\nLogMessage Debug -locale=en \"\"\r\nLogMessage Debug -debug=true \"\"\r\nLogMessage Debug -version=false \"\"\r\nLogMessage Debug -description=false \"\"\r\nLogMessage Debug -help=false \"\"\r\nLogMessage Debug -catalog=false \"\"\r\nLogMessage Debug -diagconf=.\\diagconf.ini \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -Caption= \"\"\r\nLogMessage Debug -DataCollectionFile= \"\"\r\nLogMessage Debug -DeviceDescription=Intel(R) Dual Band Wireless-AC 3165 \"\"\r\nLogMessage Debug -DeviceID= \"\"\r\nLogMessage Debug -Index=1 \"\"\r\nLogMessage Debug -Retries=2 \"\"\r\nLogMessage Debug -TestRepeats=1 \"\"\r\nLogMessage Debug -integratormsgfile=.\\net-diags.msg \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -tiledpopups= \"\"\r\nLogMessage Debug -tiledpopupsbutton= \"\"\r\nLogMessage Debug -tiledpopupsnofocus= \"\"\r\nUpdatePercentage 0\r\nLogMessage Debug Completed in 47ms \"\"\r\nUpdatePercentage 1\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test started \"\"\r\nUpdatePercentage 5\r\nLogMessage Debug Completed in 156ms \"\"\r\nUpdatePercentage 10\r\nLogMessage Debug Completed in 0ms \"\"\r\nUpdatePercentage 20\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Debug IRQ Number is 1 \"\"\r\nUpdatePercentage 80\r\nLogMessage Debug Completed in 63ms \"\"\r\nUpdatePercentage 90\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test passed \"\"\r\nUpdatePercentage 100\r\nLogMessage Debug Completed in 94ms \"\"\r\nLogMessage Debug Test execution time: 313 milliseconds \"\"\r\nEndOfTest\r\n","Record":null},{"Id":"4e9e1ce2-4e01-4cf0-bb65-5ccd4b82edc3","ToolName":"IRQ Test","ToolVersion":"8.4.0.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:13:38 PM","FormattedStopTime":"6/12/2021 7:13:40 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:0:1","LogData":"LogMessage Debug diagnostic: C:\\Users\\ewaas\\AppData\\Local\\Temp\\HPDIAGS\\4e9e1ce2-4e01-4cf0-bb65-5ccd4b82edc3\\net-diags.exe \"\"\r\nLogMessage Debug version: 8.4.1, timestamp: Oct 2 2018 11:20:56 1534, cdm: 8.11.0, net: 8.0.0, ms: 8.3.0 \"\"\r\nLogMessage Debug -subtest=IRQTest \"\"\r\nLogMessage Debug -locale=en \"\"\r\nLogMessage Debug -debug=true \"\"\r\nLogMessage Debug -version=false \"\"\r\nLogMessage Debug -description=false \"\"\r\nLogMessage Debug -help=false \"\"\r\nLogMessage Debug -catalog=false \"\"\r\nLogMessage Debug -diagconf=.\\diagconf.ini \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -Caption= \"\"\r\nLogMessage Debug -DataCollectionFile= \"\"\r\nLogMessage Debug -DeviceDescription=Realtek PCIe FE Family Controller \"\"\r\nLogMessage Debug -DeviceID= \"\"\r\nLogMessage Debug -Index=1 \"\"\r\nLogMessage Debug -Retries=2 \"\"\r\nLogMessage Debug -TestRepeats=1 \"\"\r\nLogMessage Debug -integratormsgfile=.\\net-diags.msg \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -tiledpopups= \"\"\r\nLogMessage Debug -tiledpopupsbutton= \"\"\r\nLogMessage Debug -tiledpopupsnofocus= \"\"\r\nUpdatePercentage 0\r\nLogMessage Debug Completed in 47ms \"\"\r\nUpdatePercentage 1\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test started \"\"\r\nUpdatePercentage 5\r\nLogMessage Debug Completed in 188ms \"\"\r\nUpdatePercentage 10\r\nLogMessage Debug Completed in 0ms \"\"\r\nUpdatePercentage 20\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Debug IRQ Number is 1 \"\"\r\nUpdatePercentage 80\r\nLogMessage Debug Completed in 93ms \"\"\r\nUpdatePercentage 90\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test passed \"\"\r\nUpdatePercentage 100\r\nLogMessage Debug Completed in 94ms \"\"\r\nLogMessage Debug Test execution time: 375 milliseconds \"\"\r\nEndOfTest\r\n","Record":null},{"Id":"a088469f-b159-4d7e-b4f9-0f1ed77a95af","ToolName":"Battery Check","ToolVersion":"1.17.4.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:13:04 PM","FormattedStopTime":"6/12/2021 7:13:37 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:0:33","LogData":"CeementBatteryCheckResult: 11\r\nDevicesSupported: 1\r\nDeviceCount: 1\r\nPrimary_ACPowerOn: True\r\nPrimary_ACAdapterOk: True\r\nACAdapterStatus: False\r\nPrimary_TestresultString: OK\r\nPrimary_DesignCapacity: 2850mAh\r\nPrimary_FullChargeCapacity: 2464mAh\r\nPrimary_RemainingCapacity: 2404mAh\r\nPrimary_MaxError: 2\r\nPrimary_CycleCount: 235\r\nPrimary_Temperature: 26deg C\r\nPrimary_Voltage: 16478mV\r\nPrimary_Current: 0mA\r\nPrimary_DesignVoltage: 14600mV\r\nPrimary_Status: 224\r\nPrimary_CellVoltage1: 4115mV\r\nPrimary_CellVoltage2: 4113mV\r\nPrimary_CellVoltage3: 4121mV\r\nPrimary_CellVoltage4: 4129mV\r\nPrimary_SerialNumber: 02122 02/26/2016\r\nPrimary_ManufacturerName: 131-42-6E\r\nPrimary_BatteryCTNumber: 6EUUEC4GW171XR\r\nPrimary_Warranty: 1\r\nPrimary_CalibrationType: 3\r\nPrimary_ChargeControl: Failed\r\nPrimary_TempCharge: True\r\nPrimary_ChargeTest: False\r\nPrimary_ChargeCapacity: 86\r\nPrimary_TempAlarm: False\r\nPrimary_DeepDischarge: False\r\nPrimary_FullCharge: False\r\nPrimary_FullChargeStatus: True\r\nPrimary_BatteryCharge: False\r\nPrimary_DesignCycleCount: 300\r\n","Record":null},{"Id":"0699814c-9c5f-46ad-8c9d-a1c61a163f2b","ToolName":"Video Memory Fast Check","ToolVersion":"8.7.0.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:12:53 PM","FormattedStopTime":"6/12/2021 7:13:02 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:0:9","LogData":"LogMessage Debug diagnostic: C:\\Users\\ewaas\\AppData\\Local\\Temp\\HPDIAGS\\0699814c-9c5f-46ad-8c9d-a1c61a163f2b\\video-diags.exe \"\"\r\nLogMessage Debug version: 8.7.0, timestamp: Aug 29 2018 15:03:30 1534, cdm: 8.10.0, ms: 8.3.0 \"\"\r\nLogMessage Debug -subtest=VideoMemoryTest \"\"\r\nLogMessage Debug -locale=en \"\"\r\nLogMessage Debug -debug=true \"\"\r\nLogMessage Debug -version=false \"\"\r\nLogMessage Debug -description=false \"\"\r\nLogMessage Debug -help=false \"\"\r\nLogMessage Debug -catalog=false \"\"\r\nLogMessage Debug -diagconf=.\\diagconf.ini \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -ActivateDiscreteGPU=false \"\"\r\nLogMessage Debug -Caption= \"\"\r\nLogMessage Debug -DataCollectionFile= \"\"\r\nLogMessage Debug -DeviceID=0 \"\"\r\nLogMessage Debug -HighMode=true \"\"\r\nLogMessage Debug -Retries=1 \"\"\r\nLogMessage Debug -integratormsgfile= \"\"\r\nLogMessage Debug -paramfile= \"\"\r\nLogMessage Debug -paramsection= \"\"\r\nLogMessage Debug -tiledpopups= \"\"\r\nLogMessage Debug -tiledpopupsbutton= \"\"\r\nLogMessage Debug -tiledpopupsnofocus= \"\"\r\nUpdatePercentage 0\r\nLogMessage Debug Completed in 63ms \"\"\r\nUpdatePercentage 1\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test started. \"\"\r\nUpdatePercentage 10\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Debug Display Mode:1920x1080x32 \"\"\r\nUpdatePercentage 55\r\nLogMessage Debug Completed in 1062ms \"\"\r\nUpdatePercentage 60\r\nLogMessage Debug Completed in 1016ms \"\"\r\nUpdatePercentage 65\r\nLogMessage Debug Completed in 1047ms \"\"\r\nUpdatePercentage 70\r\nLogMessage Debug Completed in 1047ms \"\"\r\nUpdatePercentage 80\r\nLogMessage Debug Completed in 1015ms \"\"\r\nUpdatePercentage 85\r\nLogMessage Debug Completed in 1282ms \"\"\r\nLogMessage Status MemoryPitch 7680 \"\"\r\nLogMessage Status ScreenPitch 7680 \"\"\r\nUpdatePercentage 86\r\nLogMessage Debug Completed in 468ms \"\"\r\nLogMessage Status fixed pattern testing \"\"\r\nUpdatePercentage 88\r\nLogMessage Debug Completed in 32ms \"\"\r\nUpdatePercentage 89\r\nLogMessage Debug Completed in 15ms \"\"\r\nUpdatePercentage 90\r\nLogMessage Debug Completed in 32ms \"\"\r\nUpdatePercentage 91\r\nLogMessage Debug Completed in 15ms \"\"\r\nUpdatePercentage 92\r\nLogMessage Debug Completed in 31ms \"\"\r\nUpdatePercentage 93\r\nLogMessage Debug Completed in 16ms \"\"\r\nUpdatePercentage 94\r\nLogMessage Debug Completed in 16ms \"\"\r\nUpdatePercentage 95\r\nLogMessage Debug Completed in 31ms \"\"\r\nUpdatePercentage 95\r\nLogMessage Debug Completed in 0ms \"\"\r\nLogMessage Subtests Test passed. \"\"\r\nUpdatePercentage 100\r\nLogMessage Debug Completed in 172ms \"\"\r\nLogMessage Debug Test execution time: 7406 milliseconds \"\"\r\nEndOfTest\r\n","Record":null},{"Id":"9f8e8ee1-02f7-414f-87e0-24fc8798e6b7","ToolName":"Disk Read Verify","ToolVersion":"1.0.0.3 (1.6.4.0)","Instance":"Storage 1: TOSHIBA MQ01ABD100","FormattedStartTime":"6/12/2021 7:12:47 PM","FormattedStopTime":"6/12/2021 7:12:52 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:0:4","LogData":"TestStarted.\r\nTarget device: \\\\.\\PhysicalDrive0\r\nBytesPerSector: 512\r\nReading 50000 sectors.\r\nUpdatePercentage 10\r\nUpdatePercentage 20\r\nUpdatePercentage 30\r\nUpdatePercentage 40\r\nUpdatePercentage 50\r\nUpdatePercentage 60\r\nUpdatePercentage 70\r\nUpdatePercentage 80\r\nUpdatePercentage 90\r\nUpdatePercentage 100\r\nTest ran for 4.296s.\r\nTestPassed.\r\nEndOfTest\r\n","Record":null},{"Id":"53a826d5-9440-4b66-8cab-bf8a44956a7e","ToolName":"Short Drive Self-Test","ToolVersion":"1.2.0.0 (1.6.4.0)","Instance":null,"FormattedStartTime":"6/12/2021 7:10:44 PM","FormattedStopTime":"6/12/2021 7:12:45 PM","FormattedResult":"Execution Passed","FailureId":null,"ErrorCode":"","FormattedElapsedTime":"0:0:2:1","LogData":"ShortDST passed: TOSHIBA MQ01ABD100, 56Q1PHODT\r\n","Record":null}];
+        var platform = {"AgentSession":null,"CsoSession":null,"ExeName":"HpHwDiagA"};
+        var systemInfo = {"Manufacturer":"HP","Model":"HP ENVY Notebook","System ID":"816D","Product ID":"P4W31UA#ABA","Memory Size":"16384 MB RAM","BIOS Date":"12/18/2015","BIOS Revision":"F.77","Serial Number":"5CD62348BT","Operating System Image":"15WW3CGT604#SABA#DABA","Installed OS version":"2009 (10.0.19042)"}; // Workaround until we fix data with language agnostic strings
+        var summaryData = [{"Id":"bc48b07e-3dff-4256-9fbc-8a4e74bd503c","Name":"Fast CPU Stress Test","Instance":null,"TotalRunTime":"00:01:13","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"3006e6d6-5ab9-414c-a53b-86e19e9ff4fe","Name":"Wireless ROM Test","Instance":null,"TotalRunTime":"00:00:01","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"3006e6d6-5ab9-414c-a53b-86e19e9ff4fd","Name":"ROM Test","Instance":null,"TotalRunTime":"00:00:01","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"4e9e1ce2-4e01-4cf0-bb65-5ccd4b82edc4","Name":"Wireless IRQ Test","Instance":null,"TotalRunTime":"00:00:00","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"4e9e1ce2-4e01-4cf0-bb65-5ccd4b82edc3","Name":"IRQ Test","Instance":null,"TotalRunTime":"00:00:01","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"a088469f-b159-4d7e-b4f9-0f1ed77a95af","Name":"Battery Check","Instance":null,"TotalRunTime":"00:00:33","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"0699814c-9c5f-46ad-8c9d-a1c61a163f2b","Name":"Video Memory Fast Check","Instance":null,"TotalRunTime":"00:00:09","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"9f8e8ee1-02f7-414f-87e0-24fc8798e6b7","Name":"Disk Read Verify","Instance":"Storage 1: TOSHIBA MQ01ABD100","TotalRunTime":"00:00:04","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7},{"Id":"53a826d5-9440-4b66-8cab-bf8a44956a7e","Name":"Short Drive Self-Test","Instance":null,"TotalRunTime":"00:02:01","TotalRuns":1,"LastResult":"Execution Passed","LastRunResultType":7}];
+        var button = document.getElementById('Expand');
+        button.innerHTML = "Expand / Collapse";
+
+        var button = document.getElementById('SaveFiles');
+        button.innerHTML = "Save Log Files";
+        //appendHeaderData(data['PlatformInfo']); // Workaround until we fix data with language agnostic strings
+        appendHeaderData(systemInfo);
+
+        if (platform['AgentSession']) {
+            var nodeToCreate = document.createElement("span");
+            nodeToCreate.id = platform['AgentSession'];
+            nodeToCreate.className = 'bold';
+            nodeToCreate.innerHTML = "<b>" + "AgentID" + ":" + "</b>" + platform['AgentSession'] + "</br>";
+            document.getElementById("productInfoContainer").appendChild(nodeToCreate);
+        }
+        if (platform['CsoSession']) {
+            var nodeToCreate = document.createElement("span");
+            nodeToCreate.id = platform['CsoSession'];
+            nodeToCreate.className = 'bold';
+            nodeToCreate.innerHTML = "<b>" + "CSONumber" + ":" + "</b>" + platform['CsoSession'] + "</br>" + "</br>" + "</br>";
+            document.getElementById("productInfoContainer").appendChild(nodeToCreate);
+        }
+        document.getElementById('Header').innerHTML = platform['ExeName'] +  "<br />" + "SessionLog";
+        document.getElementById('Title').innerHTML = data['ExeName'] + 'SessionLog';
+        createTables(summaryData, data);
+    }
+    function appendHeaderData(platforminfo) {
+        for (var i in platforminfo) {
+            if (platforminfo[i]) {
+                var nodeToCreate = document.createElement("span");
+                nodeToCreate.id = i;
+                nodeToCreate.className = 'bold';
+                nodeToCreate.innerHTML = "<div class='list-item-background even-space-row' style='max-width: 450px;'> <div class='col-xs-6 even-space-col'><span style='font-weight: bold;'>" + i + "</span></div>" + "<div class='col-xs-6 even-space-col' style='border-left: 1px solid #ddd;'>" + platforminfo[i] + "</div></div>";
+                document.getElementById("productInfoContainer").appendChild(nodeToCreate);
+            }
+        }
+    }
+    function createTables(summaryData, entries) {
+        for (var i = 0; i < summaryData.length; i++) {
+            var table = document.createElement('table');
+            var tablerow = table.insertRow(-1);
+            tablerow.className = "uefiBlue";
+
+            var newTh = document.createElement('th');
+            newTh.innerHTML = "Name";
+            newTh.style.width = "100px";
+            tablerow.appendChild(newTh);
+
+            newTh = document.createElement('th');
+            //newTh.innerHTML = "Total Runs Conducted";
+            newTh.innerHTML = "Runs";
+            newTh.style.width = "35px";
+            tablerow.appendChild(newTh);
+
+            newTh = document.createElement('th');
+            newTh.innerHTML = "Result";
+            newTh.style.width = "50px";
+            tablerow.appendChild(newTh);
+
+            newTh = document.createElement('th');
+            newTh.innerHTML = "Runtime";
+            newTh.style.width = "40px";
+            tablerow.appendChild(newTh);
+
+            newTh = document.createElement('th');
+            newTh.innerHTML = "Details";
+            tablerow.appendChild(newTh);
+            newTh.style.width = "40px";
+            table.appendChild(tablerow);
+
+            document.getElementById("tablesContainer").appendChild(table);
+            var newrow = table.insertRow(-1);
+            var stressorname = newrow.insertCell(0);
+            stressorname.innerHTML = summaryData[i]['Name'] + ' (' +entries[i]['Instance'] +')';
+            stressorname.className = "AlignCenter";
+            var totalruns = newrow.insertCell(1);
+            totalruns.innerHTML = summaryData[i]['TotalRuns'];
+            totalruns.className = "AlignCenter";
+            var result = newrow.insertCell(2);
+            var resultToAdd = getResult(summaryData[i]['LastResult']);
+            result.innerHTML = resultToAdd;
+            result.id = summaryData[i]['LastResult'];
+            var className = getResultTypeClass(summaryData[i]['LastRunResultType']);
+            result.className = "AlignCenter " + className;
+            var totalruntime = newrow.insertCell(3);
+            totalruntime.innerHTML = summaryData[i]['TotalRunTime'];
+            totalruntime.className = "AlignCenter";
+            var buttonrow = newrow.insertCell(4);
+            buttonrow.className = "AlignCenter";
+            var button = document.createElement('button');
+            button.id = 'tog' + summaryData[i]['Id'];
+            button.innerHTML = "Show";
+            //NEW
+            button.Tag =i;
+            button.onclick = function () {
+                var testName = this.id.substring(3, this.id.length);
+                toggleTable('tbl'+ this.Tag, testName);
+            }
+            buttonrow.appendChild(button);
+            createResultHeaderRow(summaryData[i],i);
+            for (var k = 0; k < entries.length; k++) {
+                if (entries[k]['Id'] == summaryData[i]['Id'] && entries[k]['Instance'] == summaryData[i] ['Instance']) {
+                    var entry = entries[k]['ToolName'];
+                    var entry2 = summaryData[i]['Name'];
+                    createLogTables(entries[k], i, k); //NEW
+                }
+            }
+            table.appendChild(newrow);
+            var linebreak = document.createElement('p');
+            document.getElementById("tablesContainer").appendChild(linebreak);
+        }
+    }
+    function createResultHeaderRow(summaryData,i) {
+        var newtable = document.createElement('table');
+        newtable.id = 'tbl'+ i;
+        newtable.style.display = 'none';
+        var tablerow = document.createElement('tr');
+        tablerow.className = "Overlap";
+
+        var newTh = document.createElement('th');
+        newTh.innerHTML = "Name";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Instance";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Version";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Start time";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Stop time";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Runtime";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Code";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Failure ID";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Result";
+        tablerow.appendChild(newTh);
+
+        newTh = document.createElement('th');
+        newTh.innerHTML = "Display Log";
+        tablerow.appendChild(newTh);
+
+        newtable.appendChild(tablerow);
+        document.getElementById("tablesContainer").appendChild(newtable);
+    }
+
+    function insertCell(newrow, cellNum, innerHtml, className) {
+        newTd = newrow.insertCell(cellNum);
+        newTd.innerHTML = innerHtml;
+        newTd.className = className;         
+        return newTd;
+    }
+    function createLogTables(entry, summary, runid) {
+        var table = document.getElementById('tbl' + summary);
+        var newrow = table.insertRow(-1);
+        var i=0;
+        insertCell(newrow, i++, entry['ToolName'], "AlignCenter");
+        insertCell(newrow, i++, entry['Instance'], "AlignCenter");
+        insertCell(newrow, i++, entry['ToolVersion'], "AlignCenter");
+        insertCell(newrow, i++, entry['FormattedStartTime'], "AlignCenter");
+        insertCell(newrow, i++, entry['FormattedStopTime'], "AlignCenter");
+        insertCell(newrow, i++, entry['FormattedElapsedTime'], "AlignCenter");
+        insertCell(newrow, i++, entry['ErrorCode'], "AlignCenter");
+        insertCell(newrow, i++, entry['FailureId'], "AlignCenter");
+        newTd=insertCell(newrow, i++, getResult(entry['FormattedResult']), "AlignCenter " + getResultTypeClass(entry.ResultType));
+        newTd.id = entry['Result'];
+        newTd = newrow.insertCell(i++);
+        table.appendChild(newrow);
+        if (entry['LogData'] == null || entry['LogData'] == "") {
+            newTd.innerHTML = "";
+        }
+        else {
+            var ssd = entry['ToolName'].substring(0, 3);
+            var button = document.createElement('button');
+
+            button.innerHTML = "Show log";
+            button.id = 'tog' + ssd + runid.toString();
+            button.className = "AlignCenter";
+            button.onclick = function () {
+                var idtoToggle = this.id.substring(3, this.id.length);
+                toggleRow(idtoToggle);
+            }
+            newTd.className = "AlignCenter";
+            newTd.appendChild(button);
+            newrow = table.insertRow(-1);
+            newrow.style.display = "none";
+            newrow.id = ssd + runid.toString();
+            newTd = newrow.insertCell(0);
+            var logdata = entry['LogData'];
+            logdata = logdata.replace(/(\r\n|\n|\r)/g, "<br />");
+            newTd.innerHTML = logdata;
+            newTd.id = ssd + runid.toString() + "loginfo";
+            newTd.className = 'AlignLeftFontSize';
+            document.getElementById(ssd + runid.toString() + "loginfo").colSpan = 7;
+            table.appendChild(newrow);
+        }
+    }
+
+    function getResultTypeClass(resultType) {
+        var className = "";
+        if (resultType == 1) {
+            className = "passed";
+        }
+        else if (resultType == 2) {
+            className = "failed";
+        }
+        return className;
+    }
+
+    // TODO: cancel will return passed
+    function getResult(result) {
+        return result;
+        //if (result == "Execution Failed")
+        //    return result;
+        //return "Execution Passed";
+    }
+    function toggleTable(tname,bname)
+    {
+        var elem=document.getElementById(tname);
+        var button=document.getElementById("tog"+ bname);
+        var hide=elem.style.display =="none";
+        if (hide) {
+            elem.style.display="table";
+            button.innerHTML = "Hide";
+        }
+        else {
+            elem.style.display="none";
+            button.innerHTML = "Show";
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    function toggleRow(Rname)
+    {
+        var elem=document.getElementById(Rname);
+        var button=document.getElementById("tog"+ Rname);
+        var hide = elem.style.display =="none";
+        if (hide) {
+            elem.style.display="";
+            button.innerHTML = "Hide log";
+        }
+        else {
+            elem.style.display="none";
+            button.innerHTML = "Show log";
+        }
+    }
+
+    function toggleInfoDisplay() {
+        var elem = document.getElementById("productInfoContainer");
+        var hide=elem.style.display =="none";
+        if (hide) {
+            elem.style.display = "block";
+        }
+        else {
+            elem.style.display = "none";
+        }
+
+        var desiredWidth = window.innerWidth;
+
+        var headerHeight = (document.getElementById("mainNav") || {}).offsetHeight;
+        var windowHeight = window.innerHeight;
+
+        var platformInfoElem = document.getElementById("tablesContainer");
+
+        var elemHeight = document.getElementById("PlatformInfo").offsetHeight;
+
+        var otherHeight = document.getElementById("productInfoContainer").clientHeight;
+
+        var desiredHeight = windowHeight - headerHeight - (elemHeight - platformInfoElem.offsetHeight) - 75;
+
+        platformInfoElem.style.height = desiredHeight + "px";
+    }
+
+</script>
+<html> <body onload = 'AppendData()'>
+<h4 id="Header" style="font-weight: bold; text-align: center;"></h4>
+<div id="PlatformInfo" style="padding-left: 10px; padding-right: 10px;">
+    <div style="float: left; width: 100%; margin-bottom: 10px;">
+        <button onclick="toggleInfoDisplay()" id="Expand">ExpandCollapse</button>
+        <button ng-click="logs.saveFiles()" id='SaveFiles' style='display: none;'>SaveLogFiles</button>
+    </div>
+    <div id="productInfoContainer" style="margin-bottom: 10px;">
+        <div><b>System under test</b></div>
+    </div>
+    <div id="tablesContainer" style="overflow: scroll; width: 100%;"></div>
+</div>
+</body>
+</html>
